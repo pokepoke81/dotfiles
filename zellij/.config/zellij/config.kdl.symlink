@@ -1,0 +1,29 @@
+keybinds {
+    shared_except "locked" {
+        // Unbind Alt+Arrow to avoid collision with macOS Option key behavior.
+        // Alt+hjkl still works for pane navigation.
+        unbind "Alt Left" "Alt Right" "Alt Up" "Alt Down"
+        // Alt+f collides with macOS Option+Right (sends ESC+f)
+        unbind "Alt f"
+    }
+}
+
+// Always attach to existing session, or create if none exists
+session_name "main"
+attach_to_session true
+
+// Match tmux scrollback (default is 10000)
+scroll_buffer_size 50000
+
+// Persist pane content across session restarts
+session_serialization true
+serialize_pane_viewport true
+
+// Clean look without pane borders
+pane_frames false
+
+// Styled and colored underlines
+styled_underlines true
+
+// No custom theme - lets Ghostty's One Half Dark colors pass through
+// and preserves visible text selection (Zellij themes break mouse selection)

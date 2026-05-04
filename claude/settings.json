@@ -30,7 +30,10 @@
       "Bash(CODEX_CONTEXT_DIR:*)",
       "Bash(CODEX_MODEL:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "auto"
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipAutoPermissionPrompt": true
 }
