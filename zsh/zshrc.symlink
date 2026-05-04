@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z brew asdf)
+plugins=(git z brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,9 +71,10 @@ else
   export DOTFILES=$HOME/.dotfiles
 fi
 
-# all of our zsh files
+# all of our zsh files (exclude non-shell directories)
+setopt extended_glob
 typeset -U config_files
-config_files=($DOTFILES/**/*.zsh)
+config_files=($DOTFILES/(^(claude|script|bin|ghostty))/**/*.zsh(N))
 
 # Source each file in $config_files
 for file in "${config_files[@]}"; do
@@ -81,3 +82,9 @@ for file in "${config_files[@]}"; do
 done
 
 unset config_files
+export PATH="$HOME/.local/bin:$PATH"
+
+# mise (runtime version manager, replaces asdf)
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+fi
