@@ -35,6 +35,7 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
+  "ultracode": true,
   "skipAutoPermissionPrompt": true,
   "env": {
     "ANTHROPIC_MODEL": "databricks-claude-opus-4-8",
