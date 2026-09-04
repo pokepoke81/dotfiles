@@ -161,10 +161,20 @@ install_claude_config() {
   link_file "$DOTFILES_ROOT/claude/skills" "$HOME/.claude/skills"
 }
 
+configure_git() {
+  info '🚀 Configuring git defaults...'
+  # Written via `git config --global` rather than a symlinked ~/.gitconfig,
+  # because Codespaces writes user.name/email and credential helpers into
+  # ~/.gitconfig itself and we don't want to fight over that file.
+  git config --global pull.rebase false
+  success "✅ git pull.rebase = false"
+}
+
 install_oh_my_zsh
 install_tmux_plugin_manager
 install_dotfiles
 install_claude_config
+configure_git
 
 echo ''
 echo '🎉 Installation complete! 🥳'
