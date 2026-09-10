@@ -1,5 +1,6 @@
 {
   "includeCoAuthoredBy": false,
+  "model": "fable",
   "permissions": {
     "allow": [
       "Skill(codex-discussion)",
@@ -34,15 +35,18 @@
     "defaultMode": "auto"
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "medium",
   "ultracode": true,
   "skipAutoPermissionPrompt": true,
   "env": {
-    "ANTHROPIC_MODEL": "claude-opus",
     "ANTHROPIC_BASE_URL": "https://llm.weigandconstruction.com",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "Fable (LiteLLM)",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_DESCRIPTION": "Claude Fable via LiteLLM router",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_SUPPORTED_CAPABILITIES": "effort,xhigh_effort,max_effort,adaptive_thinking,rejects_disabled_thinking,mid_conv_system",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus",
     "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "Opus (LiteLLM)",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL_DESCRIPTION": "Claude Opus 4.8 via LiteLLM router",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL_DESCRIPTION": "Claude Opus via LiteLLM router",
     "ANTHROPIC_DEFAULT_OPUS_MODEL_SUPPORTED_CAPABILITIES": "effort,xhigh_effort,max_effort,thinking,adaptive_thinking,interleaved_thinking",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet",
     "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "Sonnet (LiteLLM)",
