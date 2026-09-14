@@ -36,7 +36,6 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
-  "ultracode": true,
   "skipAutoPermissionPrompt": true,
   "env": {
     "ANTHROPIC_BASE_URL": "https://llm.weigandconstruction.com",
