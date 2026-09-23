@@ -1,6 +1,6 @@
 {
   "includeCoAuthoredBy": false,
-  "model": "fable",
+  "model": "opus",
   "permissions": {
     "allow": [
       "Skill(codex-discussion)",
@@ -35,7 +35,7 @@
     "defaultMode": "auto"
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "skipAutoPermissionPrompt": true,
   "env": {
     "ANTHROPIC_BASE_URL": "https://llm.weigandconstruction.com",
