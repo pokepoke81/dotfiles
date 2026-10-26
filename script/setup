@@ -64,8 +64,9 @@ link_file() {
       if [ "$currentSrc" == "$src" ]; then
         skip=true
       else
-        if [[ -n "$CODESPACES" ]] || [ "$FORCE_OVERWRITE" == "true" ]; then
-          # We are installing into a codespace or force flag is set, so we should just overwrite
+        if [[ -n "$CODESPACES" ]] || [ "$FORCE_OVERWRITE" == "true" ] || [ ! -t 0 ]; then
+          # Codespace, --force, or no terminal to answer the prompt (Foreman runs
+          # this headless and can't pass --force), so just overwrite
           overwrite=true
         else
           user "😱 File already exists: $dst ($(basename "$src")), what do you want to do?\n\
